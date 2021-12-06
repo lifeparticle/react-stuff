@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			crossorigin
+			src="https://unpkg.com/react@17/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+		></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
+
+	<script type="text/babel">
+		// virtual dom
+		// in memory dom
+		// diff algorithm
+		//  a    a
+		// / \  / \
+		// x f  z f
+		let parent = document.getElementById("root");
+		// let div = React.createElement("div", {
+		// 	className: "container",
+		// 	children: "Falguni",
+		// });
+		// JSX
+		// const div = <div className="container">Leon</div>;
+
+		let Div = ({ name }) => {
+			return (
+				<div className="container">
+					{name} {2 + 2}
+				</div>
+			);
+		};
+
+		const aa = <Div name={"leon bro and ush bro"} />;
+		const bb = <Div name={"Subrina"} />;
+
+		ReactDOM.render(bb, parent);
+		//let div = document.createElement("div");
+		//div.innerHTML = "Hello world";
+		//parent.appendChild(div);
+	</script>
+</html>
